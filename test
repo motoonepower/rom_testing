@@ -1,11 +1,11 @@
 #!/bin/bash
-apt-get update && apt-get upgrade -y
-apt install gpg -y
+#apt-get update && apt-get upgrade -y
+#apt install gpg -y
 
 
 ls
 
-touch test.zip
+#touch test.zip
 
 ls
 
@@ -16,6 +16,6 @@ cd /tmp/rom
 
 ls
 
-touch test2.zip
+#touch test2.zip
 
 ls
