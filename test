@@ -1,2 +1,29 @@
+#!/bin/bash
+sudo apt update
+sudo apt upgrade
+sudo apt install gpg
+df -h
+free -h
+ls
+
+mkdir -p /tmp/rom # Where to sync source
+mkdir -p /tmp/ccache # Where to sync source
+cd /tmp/rom
+
+##some of my work
+git config --global user.name "monu70152"
+git config --global user.email "sunil9802506051@gmail.com"
+
+# Repo init command
+repo init --depth=1 --no-repo-verify -u https://github.com/AospExtended/manifest -b 12.x -g default,-mips,-darwin,-notdefault
+
+# Local manifest
+git clone https://github.com/rushiranpise/local_manifest --depth 1 -b aex .repo/local_manifests
+
+# Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
+#git clone https://github.com/LineageOS/android_system_qcom -b lineage-19.1 system/qcom
+
+
 df -h
 free -h
