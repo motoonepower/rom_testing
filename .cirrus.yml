@@ -16,4 +16,4 @@ task:
       - bash test
       
     upload_ccache:
-     - bash uploadccache
+     - bash uccache
