@@ -9,10 +9,13 @@ task:
       cpu: 8
       memory: 32g
     
-    update_script:
-     - bash update
-    
-    test_script:
-      - bash test
+    setup_script:
+      - bash setup
+    dccache_script:
+      - bash dccache
+    sync_script:
+      - bash sync
+    build_script:
+      - bash build
     upload_script:
-      - bash uccache
+      - bash uccache  
