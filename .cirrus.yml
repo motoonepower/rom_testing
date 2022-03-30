@@ -10,8 +10,7 @@ task:
       memory: 32g
       commands:
       - sudo apt-get install gpg
-      - apt-get update
-      - apt-get upgrade
-      
+      - sudo apt-get update
+      - sudo apt-get upgrade
      test_script: # To test rom
       - bash test # test build script
