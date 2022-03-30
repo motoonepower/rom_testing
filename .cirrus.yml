@@ -6,6 +6,8 @@ task:
     name: motoonepower
     container:
       image: aarunalr/aosp-build
+      cpu: 16
+      memory: 32g
     
     update_spript:
      - bash update
