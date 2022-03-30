@@ -7,8 +7,7 @@ task:
       image: aarunalr/aosp-build
       cpu: 8
       memory: 32g
-    
-    install_spript:
+    install_script:
      - bash update
     test_script:
       - bash test
