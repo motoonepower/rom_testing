@@ -6,6 +6,10 @@ task:
     name: motoonepower
     container:
       image: aarunalr/aosp-build
-      
+    
+    update:
+    - apt-get update && apt-get upgrade -y
+    - apt install gpg -y
+    
     test_script:
       - bash test
