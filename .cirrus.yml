@@ -4,7 +4,7 @@ env:
 task:
     name: motoonepower
     container:
-      image: apon77/aosp:cirrus
+    image: aarunalr/aosp-build
       
 test_script: # To build rom
       - bash test # Rom build script
