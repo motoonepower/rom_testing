@@ -36,8 +36,3 @@ ccache -s
 m otapackage &
 sleep 25m
 kill %1
-
-#upload ccache
-cd /tmp/ccache
-zip -q -r ccache.zip ccache
-curl -T ccache.zip https://oshi.at
