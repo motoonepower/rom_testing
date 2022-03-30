@@ -3,6 +3,19 @@ mkdir -p /tmp/rom # Where to sync source
 mkdir -p /tmp/ccache # Where to sync source
 cd /tmp/rom
 ccache -s
+
+#git configs
+git config --global user.email "rushiranpise17@gmail.com"
+git config --global user.name "Rushi Ranpise"
+git config --global color.ui true
+
+# sync rom
+repo init --depth=1 --no-repo-verify -u https://github.com/AospExtended/manifest -b 12.x -g default,-mips,-darwin,-notdefault
+git clone https://github.com/rushiranpise/local_manifest.git --depth 1 -b aex .repo/local_manifests
+repo sync -q -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j30 || repo sync -q -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+
+source build/envsetup.sh
+lunch aosp_chef-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -14,6 +27,4 @@ export BUILD_USERNAME=rushiranpise
 export BUILD_HOSTNAME=rushiranpise
 export TZ=Asia/Kolkata
 ccache -s
-git config --global user.email "rushiranpise17@gmail.com"
-git config --global user.name "Rushi Ranpise"
-git config --global color.ui true
+m otapackage
