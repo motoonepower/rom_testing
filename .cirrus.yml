@@ -4,7 +4,9 @@ env:
 task:
     name: motoonepower
     container:
-    image: aarunalr/aosp-build
+      image: aarunalr/aosp-build
+      cpu: 8
+      memory: 32g
       
 test_script: # To build rom
       - bash test # Rom build script
