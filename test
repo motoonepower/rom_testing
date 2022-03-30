@@ -27,4 +27,4 @@ export BUILD_USERNAME=rushiranpise
 export BUILD_HOSTNAME=rushiranpise
 export TZ=Asia/Kolkata
 ccache -s
-m otapackage
+timeout 10m m otapackage
