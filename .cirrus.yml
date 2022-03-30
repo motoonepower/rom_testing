@@ -1,5 +1,6 @@
 env:
     CIRRUS_CLONE_DEPTH: 1
+    CIRRUS_WORKING_DIR: "/tmp/ci"
     
 task:
     name: motoonepower
@@ -11,9 +12,6 @@ task:
       - sudo apt-get install gpg
       - apt-get update
       - apt-get upgrade
-      volumes:
-          - /home/cirrus/roms:/home/cirrus/roms
-          - /home/cirrus/ccache:/home/cirrus/ccache
       
      test_script: # To test rom
       - bash test # test build script
