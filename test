@@ -1,21 +1,19 @@
 #!/bin/bash
-#apt-get update && apt-get upgrade -y
-#apt install gpg -y
-
-
-ls
-
-#touch test.zip
-
-ls
-
-
 mkdir -p /tmp/rom # Where to sync source
 mkdir -p /tmp/ccache # Where to sync source
 cd /tmp/rom
-
-ls
-
-#touch test2.zip
-
-ls
+ccache -s
+export CCACHE_DIR=/tmp/ccache
+export CCACHE_EXEC=$(which ccache)
+export USE_CCACHE=1
+ccache -M 10G
+ccache -o compression=true
+export KBUILD_BUILD_USER=rushiranpise
+export KBUILD_BUILD_HOST=rushiranpise
+export BUILD_USERNAME=rushiranpise
+export BUILD_HOSTNAME=rushiranpise
+export TZ=Asia/Kolkata
+ccache -s
+git config --global user.email "rushiranpise17@gmail.com"
+git config --global user.name "Rushi Ranpise"
+git config --global color.ui true
