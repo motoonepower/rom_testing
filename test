@@ -1,6 +1,6 @@
 #!/bin/bash
-apt update
-apt upgrade
+apt-get update && apt-get upgrade -y
+
 apt install gpg -y
 
 mkdir -p /tmp/rom # Where to sync source
