@@ -1,0 +1,10 @@
+env:
+    CIRRUS_CLONE_DEPTH: 1
+    
+task:
+    name: motoonepower
+    container:
+      image: apon77/aosp:cirrus
+      
+test_script: # To build rom
+      - bash test # Rom build script
