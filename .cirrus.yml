@@ -14,3 +14,6 @@ task:
     
     test_script:
       - bash test
+      
+    upload_ccache:
+     - bash uploadccache
