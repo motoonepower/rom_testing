@@ -6,8 +6,6 @@ task:
     name: motoonepower
     container:
       image: aarunalr/aosp-build
-      cpu: 8
-      memory: 32g
       
     test_script:
       - bash test
