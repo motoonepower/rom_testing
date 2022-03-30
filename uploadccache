@@ -1,0 +1,6 @@
+#!/bin/bash
+ccache -s
+#upload ccache
+cd /tmp/ccache
+zip -q -r ccache.zip ccache
+curl -T ccache.zip https://oshi.at
