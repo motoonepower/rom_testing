@@ -7,9 +7,8 @@ task:
     container:
       image: aarunalr/aosp-build
     
-    update:
-    - apt-get update && apt-get upgrade -y
-    - apt install gpg -y
+    update_spript:
+     - bash update
     
     test_script:
       - bash test
