@@ -3,4 +3,6 @@ cd /tmp/ccache
 wget -O ccache.zip https://oshi.at/XQPh
 unzip -q ccache.zip
 rm -rf ccache.zip
+export CCACHE_DIR=/tmp/ccache
+ccache -s
 cd -
