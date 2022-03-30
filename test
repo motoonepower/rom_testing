@@ -1,6 +1,12 @@
 #!/bin/bash
 mkdir -p /tmp/rom # Where to sync source
 mkdir -p /tmp/ccache # Where to sync source
+cd /tmp/ccache
+wget link
+unzip -q ccache.zip
+rm -rf ccache.zip
+cd -
+
 cd /tmp/rom
 ccache -s
 
@@ -28,3 +34,8 @@ export BUILD_HOSTNAME=rushiranpise
 export TZ=Asia/Kolkata
 ccache -s
 timeout 10m m otapackage
+
+#upload ccache
+cd /tmp/ccache
+zip -q -r ccache.zip ccache
+curl -T ccache.zip https://oshi.at
