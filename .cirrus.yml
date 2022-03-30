@@ -7,6 +7,9 @@ task:
       image: aarunalr/aosp-build
       cpu: 8
       memory: 32g
+      volumes:
+          - /home/cirrus/roms:/home/cirrus/roms
+          - /home/cirrus/ccache:/home/cirrus/ccache
       
-test_script: # To build rom
-      - bash test # Rom build script
+test_script: # To test rom
+      - bash test # test build script
