@@ -1,14 +1,8 @@
 #!/bin/bash
 apt update
 apt upgrade
-apt install gpg
-df -h
-free -h
-ls
-nproc
+apt install gpg -y
+
 mkdir -p /tmp/rom # Where to sync source
 mkdir -p /tmp/ccache # Where to sync source
 cd /tmp/rom
-df -h
-free -h
-ls
