@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /tmp/ccache
-wget link
+wget -O ccache.zip link
 unzip -q ccache.zip
 rm -rf ccache.zip
 cd -
