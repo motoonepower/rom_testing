@@ -4,10 +4,9 @@ env:
     
 task:
     name: motoonepower
-     container:
-     image: aarunalr/aosp-build
-     cpu: 8
-     memory: 32g
+      image: aarunalr/aosp-build
+      cpu: 8
+      memory: 32g
     
     install_spript:
      - bash update
