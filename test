@@ -1,8 +1,21 @@
 #!/bin/bash
 apt-get update && apt-get upgrade -y
-
 apt install gpg -y
+
+
+ls
+
+touch test.zip
+
+ls
+
 
 mkdir -p /tmp/rom # Where to sync source
 mkdir -p /tmp/ccache # Where to sync source
 cd /tmp/rom
+
+ls
+
+touch test2.zip
+
+ls
