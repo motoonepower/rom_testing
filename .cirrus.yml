@@ -1,6 +1,5 @@
 env:
     CIRRUS_CLONE_DEPTH: 1
-    CIRRUS_WORKING_DIR: "/tmp/ci"
     
 task:
     name: motoonepower
@@ -8,5 +7,9 @@ task:
       image: aarunalr/aosp-build
       cpu: 8
       memory: 32g
-     test_script: # To test rom
+      volumes:
+          - /home/cirrus/roms:/home/cirrus/roms
+          - /home/cirrus/ccache:/home/cirrus/ccache
+      
+test_script: # To test rom
       - bash test # test build script
