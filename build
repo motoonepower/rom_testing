@@ -15,4 +15,6 @@ export BUILD_HOSTNAME=rushiranpise
 export TZ=Asia/Kolkata
 ccache -s
 
-m otapackage & sleep 300 ; kill $!
+m otapackage & sleep 15m ; kill $!
+
+ccache -s
