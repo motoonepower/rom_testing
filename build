@@ -1,4 +1,5 @@
 #!/bin/bash
+pwd
 cd /tmp/rom
 
 source build/envsetup.sh
