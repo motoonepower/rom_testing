@@ -7,9 +7,13 @@ task:
       image: aarunalr/aosp-build
       cpu: 8
       memory: 32g
+      commands:
+      - sudo apt-get install gpg
+      - sudo apt-get update
+      - sudo apt-get upgrade
       volumes:
           - /home/cirrus/roms:/home/cirrus/roms
           - /home/cirrus/ccache:/home/cirrus/ccache
       
-test_script: # To test rom
+     test_script: # To test rom
       - bash test # test build script
