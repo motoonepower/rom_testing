@@ -4,6 +4,7 @@ env:
     
 task:
     name: motoonepower
+    timeout_in: 120m
     container:
       image: aarunalr/aosp-build
       cpu: 8
