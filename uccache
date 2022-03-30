@@ -1,6 +1,7 @@
 #!/bin/bash
+export CCACHE_DIR=/tmp/ccache
 ccache -s
 #upload ccache
-cd /tmp/ccache
-zip -q -r ccache.zip ccache
-curl -T ccache.zip https://oshi.at
+cd /tmp/ccache || echo "failed cd "
+zip -q -r ccache.zip . || echo "failed zip "
+curl -T ccache.zip https://oshi.at/ccache.zip/129600 || echo "failed upload "
