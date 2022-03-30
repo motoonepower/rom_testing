@@ -33,7 +33,9 @@ export BUILD_USERNAME=rushiranpise
 export BUILD_HOSTNAME=rushiranpise
 export TZ=Asia/Kolkata
 ccache -s
-m otapackage
+m otapackage &
+sleep 25m
+kill %1
 
 #upload ccache
 cd /tmp/ccache
