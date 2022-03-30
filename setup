@@ -1,3 +1,5 @@
 #!/bin/bash
 apt-get update && apt-get upgrade -y
 apt install gpg wget pigz unzip wget -y
+mkdir -p /tmp/rom # Where to sync source
+mkdir -p /tmp/ccache # Where to ccache source
