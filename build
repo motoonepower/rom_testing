@@ -16,6 +16,6 @@ export BUILD_HOSTNAME=rushiranpise
 export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Kolkata
 
-m otapackage & sleep 1h 30m ; kill $!
+m otapackage & sleep 1h ; kill $!
 
 cd -
