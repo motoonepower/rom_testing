@@ -10,7 +10,7 @@ task:
       name: AX61-1
     container:
       image: aarunalr/aosp-build
-      cpu: 12
+      cpu: 8
       memory: 32g
     
     setup_script:
