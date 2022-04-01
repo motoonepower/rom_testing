@@ -3,16 +3,19 @@ cd /tmp/rom
 
 source build/envsetup.sh
 lunch aosp_chef-userdebug
+
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
 ccache -M 10G
 ccache -o compression=true
 ccache -s
+
 export KBUILD_BUILD_USER=rushiranpise
 export KBUILD_BUILD_HOST=rushiranpise
 export BUILD_USERNAME=rushiranpise
 export BUILD_HOSTNAME=rushiranpise
+
 export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Kolkata
 
