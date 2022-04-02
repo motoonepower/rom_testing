@@ -9,7 +9,8 @@ task:
       image: aarunalr/aosp-build
       cpu: 8
       memory: 32g
-      setup_script:
+    
+    setup_script:
       - bash setup
     dccache_script:
       - bash dccache
