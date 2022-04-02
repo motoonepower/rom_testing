@@ -9,11 +9,8 @@ task:
       image: aarunalr/aosp-build
       cpu: 8
       memory: 32g
-      commands:
-      - apt-get update && apt-get upgrade -y
-      - apt install gpg wget unzip aria2 -y
-      - mkdir -p /tmp/rom
-      - mkdir -p /tmp/ccache
+      setup_script:
+      - bash setup
     dccache_script:
       - bash dccache
     sync_script:
