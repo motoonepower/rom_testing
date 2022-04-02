@@ -19,6 +19,9 @@ export BUILD_HOSTNAME=rushiranpise
 export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Kolkata
 
-m otapackage & sleep 1h ; kill $!
+#m otapackage & sleep 1h ; kill $!
+
+m otapackage -j30 && cd $OUT && ls
+curl -T *-ota-*.zip https://oshi.at/ccache.zip/129600
 
 cd -
