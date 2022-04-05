@@ -15,10 +15,10 @@ export KBUILD_BUILD_USER=rushiranpise
 export KBUILD_BUILD_HOST=rushiranpise
 export BUILD_USERNAME=rushiranpise
 export BUILD_HOSTNAME=rushiranpise
-export CUSTOM_BUILD_TYPE=OFFICIAL
-export PPUI_MAINTAINER=rushiranpise
-export IS_PHONE=true
-export SELINUX_IGNORE_NEVERALLOWS=true
+export CHERISH_BUILD_TYPE=OFFICIAL
+export WITH_GMS=true
+export PRODUCT_SYSTEM_DEFAULT_PROPERTIES=ro.cherish.maintainer=rushi24
+export PRODUCT_GENERIC_PROPERTIES=ro.cherish.maintainer=rushi24 
 export TZ=Asia/Kolkata
 
 #m otapackage & sleep 1h ; kill $!
