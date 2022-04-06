@@ -18,7 +18,7 @@ export BUILD_HOSTNAME=rushiranpise
 export CUSTOM_BUILD_TYPE=OFFICIAL
 export PPUI_MAINTAINER=rushiranpise
 export IS_PHONE=true
-export SELINUX_IGNORE_NEVERALLOWS=true
+
 export TZ=Asia/Kolkata
 
 #m otapackage & sleep 1h ; kill $!
