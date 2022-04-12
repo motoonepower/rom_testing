@@ -2,7 +2,7 @@
 cd /tmp/rom
 
 source build/envsetup.sh
-lunch aosp_chef-userdebug
+lunch corvus_chef-userdebug
 
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -15,15 +15,11 @@ export KBUILD_BUILD_USER=rushiranpise
 export KBUILD_BUILD_HOST=rushiranpise
 export BUILD_USERNAME=rushiranpise
 export BUILD_HOSTNAME=rushiranpise
-export CUSTOM_BUILD_TYPE=OFFICIAL
-export PPUI_MAINTAINER=rushiranpise
-export IS_PHONE=true
-
 export TZ=Asia/Kolkata
 
 #m otapackage & sleep 1h ; kill $!
 
-mka otapackage -j30 && cd $OUT && ls
+make otapackage -j30 && cd $OUT && ls
 curl -T *-ota-*.zip https://oshi.at/ccache.zip/129600
 
 cd -
