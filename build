@@ -2,7 +2,7 @@
 cd /tmp/rom
 
 source build/envsetup.sh
-lunch corvus_chef-userdebug
+lunch aicp_chef-userdebug
 
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -19,7 +19,7 @@ export TZ=Asia/Kolkata
 
 #m otapackage & sleep 1h ; kill $!
 
-make otapackage -j30 && cd $OUT && ls
+mka bacon
 curl -T *-ota-*.zip https://oshi.at/ccache.zip/129600
 
 cd -
