@@ -12,7 +12,5 @@ task:
     
     setup_script:
       - bash setup
-    sync_script:
-      - bash sync
     build_script:
       - bash build
