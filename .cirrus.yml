@@ -12,11 +12,7 @@ task:
     
     setup_script:
       - bash setup
-    #dccache_script:
-    #  - bash dccache
     sync_script:
       - bash sync
     build_script:
       - bash build
-    #upload_script:
-    #  - bash uccache  
