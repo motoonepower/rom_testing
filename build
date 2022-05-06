@@ -4,7 +4,7 @@ cd /tmp/rom
 ROM_LINK=https://github.com/Evolution-X/manifest
 ROM_BRANCH=snow
 DEVICE_BRANCH=evo
-DEVICE_LUNCH=evo_chef-userdebug
+DEVICE_LUNCH=evolution_chef-userdebug
 
 # git configs
 git config --global user.email "rushiranpise17@gmail.com"
@@ -18,6 +18,14 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 source build/envsetup.sh
 lunch ${DEVICE_LUNCH}
-mka bacon
+mka sepolicy
+mka bootimage
+mka ini
+mka api-stubs-docs
+mka hiddenapi-lists-docs
+mka system-api-stubs-docs
+mka test-api-stubs-docs
+mka SystemUI
+mka evolution
 
 curl -T *.zip https://oshi.at/ccache.zip/129600
