@@ -1,10 +1,10 @@
 #!/bin/bash
 cd /tmp/rom
 
-ROM_LINK=https://github.com/ProjectSakura/android
-ROM_BRANCH=12
-DEVICE_BRANCH=sakura
-DEVICE_LUNCH=lineage_chef-userdebug
+ROM_LINK=https://github.com/Evolution-X/manifest
+ROM_BRANCH=snow
+DEVICE_BRANCH=evo
+DEVICE_LUNCH=evo_chef-userdebug
 
 # git configs
 git config --global user.email "rushiranpise17@gmail.com"
