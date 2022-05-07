@@ -1,22 +1,4 @@
 #!/bin/bash
 cd /tmp/rom
 
-ROM_LINK=https://github.com/Evolution-X/manifest
-ROM_BRANCH=snow
-DEVICE_BRANCH=evo
-DEVICE_LUNCH=evolution_chef-userdebug
-BUILD_FLAG=evolution
-
-# git configs
-git config --global user.email "rushiranpise17@gmail.com"
-git config --global user.name "Rushi Ranpise"
-git config --global color.ui true
-
-# sync rom
-repo init --depth=1 --no-repo-verify -u ${ROM_LINK} -b ${ROM_BRANCH} -g default,-mips,-darwin,-notdefault
-git clone https://github.com/rushiranpise/local_manifest.git --depth 1 -b ${DEVICE_BRANCH} .repo/local_manifests
-( repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 -q && clear ) || ( repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -q -j8 && clear )
-
-source build/envsetup.sh
-lunch ${DEVICE_LUNCH}
-mka sepolicy && mka bootimage & mka ${BUILD_FLAG}
+${BUILD_FLAG0} sepolicy && ${BUILD_FLAG0} bootimage && ${BUILD_FLAG0} ${BUILD_FLAG1}

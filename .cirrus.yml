@@ -12,5 +12,11 @@ task:
     
     setup_script:
       - bash setup
+    change_script:
+      - bash change
+    sync_script:
+      - bash sync
+    lunch_script:
+      - bash lunch      
     build_script:
       - bash build

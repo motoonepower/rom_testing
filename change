@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /tmp/rom
+
+ROM_LINK=https://github.com/PixelPlusUI-SnowCone/manifest
+ROM_BRANCH=ppui
+DEVICE_BRANCH=ppui
+DEVICE_LUNCH=aosp_chef-userdebug
+BUILD_FLAG0=mka
+BUILD_FLAG1=bacon
