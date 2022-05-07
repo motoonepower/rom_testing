@@ -1,4 +1,7 @@
 #!/bin/bash
+# Source Vars
+source $CONFIG
+
 cd /tmp/rom
 
 # git configs
