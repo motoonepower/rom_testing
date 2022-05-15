@@ -1,9 +1,9 @@
 #!/bin/bash
 cd /tmp/rom
 
-export ROM_LINK="https://github.com/Evolution-X/manifest"
-export ROM_BRANCH="snow"
-export DEVICE_BRANCH="evolos"
-export DEVICE_LUNCH="evolution_chef-userdebug"
+export ROM_LINK="https://github.com/DotOS/manifest"
+export ROM_BRANCH="dot12.1"
+export DEVICE_BRANCH="dotlos"
+export DEVICE_LUNCH="dot_chef-userdebug"
 export BUILD_FLAG0="mka"
 export BUILD_FLAG1="evolution"
