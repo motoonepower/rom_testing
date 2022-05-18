@@ -13,3 +13,5 @@ git config --global color.ui true
 repo init --depth=1 --no-repo-verify -u $ROM_LINK -b $ROM_BRANCH -g default,-mips,-darwin,-notdefault
 git clone https://github.com/rushiranpise/local_manifest.git --depth 1 -b $DEVICE_BRANCH .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -q -j8
+
+cd kernel/motorola/msm8998 && git fetch https://github.com/jro1979oliver/kernel_motorola_msm8998 && git cherry-pick 79f171132c99d1c4402696df7d7b8b5eb8713da0
