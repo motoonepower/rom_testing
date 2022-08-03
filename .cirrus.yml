@@ -1,6 +1,8 @@
 env:
+    CONFIG: change.sh
     CIRRUS_CLONE_DEPTH: 1
     CIRRUS_WORKING_DIR: "/tmp/ci"
+    CIRRUS_SHELL: bash
     
 task:
     name: motoonepower
@@ -11,6 +13,12 @@ task:
       memory: 32g
     
     setup_script:
-      - bash setup
+      - bash setup.sh
+    change_script:
+      - bash change.sh
+    sync_script:
+      - bash sync.sh
+    lunch_script:
+      - bash lunch.sh      
     build_script:
-      - bash build
+      - bash build.sh
